@@ -1,0 +1,148 @@
+body{
+    color: #fff;
+    
+}
+.about{
+    visibility: hidden;
+}
+.about-container{
+    padding: 0 10%;
+    min-height: 100vh;
+    
+    background-color: #252525;
+    
+    
+    color: white;
+    overflow: hidden;
+}
+
+.about-img-container{
+    position: relative;
+    min-width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-items{
+    position: absolute;
+    color: #fff;
+    height: fit-content;
+    width: fit-content;
+    font-size: 20px;
+    background-color: #8957FF;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 13px;
+    cursor: pointer;
+    
+    
+}
+
+.about-items h4{
+    margin: 0;
+    width: fit-content;
+}
+
+
+.about-img{
+    height: 600px;
+    width: 50%;
+    animation: bounce 1s infinite alternate;
+
+}
+
+.about-details{
+    margin: 5px 10px
+}
+
+.base-title{
+    font-size: calc(32px + 28*(100vw - 320px)/1120);
+    letter-spacing: 10px;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 10rem;
+
+}
+
+.pointer{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 41%;
+    left: 30%;
+    z-index: 1;
+    animation: bounce 1s infinite alternate;
+}
+
+
+@media (max-width: 500px){
+    .about-img{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 30%;
+        transform: scale(2);
+    }
+    .about-details{
+        font-size: 16px;
+    }
+    .about-img-container{
+        width: 100%;
+    }
+
+    .about-items.occupation{
+        top: 40px;
+       left: 5% ;
+    }
+    .about-items.language{
+       top: 100px;
+        left: 5% ;
+    }
+    .about-items.skill{
+        top: 160px;
+        left: 5% ;
+    }
+    .about-items.hobby{
+        top: 240px;
+        left: 5% ;
+    }
+    .about-items.location{
+        top: 300px;
+        left: 5% ;
+    }
+    .pointer{
+        transform: rotate(180deg);
+        top: 75px;
+        left: 5%;
+    }
+    .about-container{
+        padding: 10% 0;
+    }
+    .base-title{
+        font-size: 40px;
+        padding-left: 5%;
+    }
+
+    .code-cv{
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .code-cv pre{
+        overflow: hidden !important ;
+    }
+
+}
+
+@keyframes bounce {
+    from{
+        transform: translateY(0)
+    }
+    to{
+        transform: translateY(-10px);
+    }
+}

@@ -1,0 +1,38 @@
+.notfound-container{
+
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-button button{
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    color: #fff;
+    
+    background-size: 200% 200%;
+    transition: background-position .5s;
+    background-position: top;
+    background-image: linear-gradient(to top, #8957FF 50%, #252525 0);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #8957FF;
+    
+}
+
+.home-button button:hover{
+    background-position: bottom;
+}
+
+@media(max-width: 500px){
+
+    .notfound-container img{
+        width: 95%;
+        height: inherit;
+    }
+}

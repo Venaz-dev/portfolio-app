@@ -1,0 +1,191 @@
+.main-header {
+  visibility: hidden;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 3;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+.sidenav a {
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 2.5em;
+  color: #b8b7ad;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+  letter-spacing: 5px;
+
+}
+
+.sidenav a:hover {
+  color: #14121c;
+  text-decoration: line-through;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 5%;
+  right: 25px;
+  
+  margin-left: 50px;
+  background-image: url(../../assets/close.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.sidenav .sidenavinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  transition: margin-left 0.5s;
+  display: none;
+
+}
+
+span#burgerMenu {
+
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-image: url(../../assets/open-menu.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 50px;
+  min-height: 50px;
+  visibility: hidden;
+}
+
+.red {
+  width: 0%;
+  height: 25%;
+  background-color: #8957FF;
+}
+
+.blue {
+  width: 0%;
+  height: 25%;
+  background-color: #8957FF;
+}
+
+.green {
+  width: 0%;
+  height: 25%;
+  background-color: #8957FF;
+}
+
+.yellow {
+  width: 0%;
+  height: 25%;
+  background-color: #8957FF;
+}
+
+.logo{
+  min-width: 200px;
+  min-height: 60px;
+  background-image: url(../../assets/venaz_logo_png@2x.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 15px;
+  left: 40%;
+
+}
+
+@media (max-width: 500px) {
+  #burgerMenu {
+    min-width: 30px;
+    min-height: 30px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@keyframes pop {
+  from {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 100%;
+  }
+
+  to {
+    border-radius: 0%;
+  }
+}
+
+@keyframes padding {
+  0% {
+    padding-top: 100%;
+  }
+
+  50% {
+    padding-top: 0%;
+  }
+
+  100% {
+    padding-top: 30%;
+  }
+}
+
+@keyframes reversepadding {
+  from {
+    padding-top: 30%;
+  }
+
+  to {
+    padding-top: 100%;
+  }
+}
+
+@keyframes reversepop {
+  from {
+    border-radius: 0%;
+  }
+
+  to {
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+  }
+
+}

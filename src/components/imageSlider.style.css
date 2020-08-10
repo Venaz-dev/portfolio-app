@@ -1,0 +1,167 @@
+.slider-container{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #252525;
+}
+
+.project-details-container{
+    width: 85vw;
+    height: 70vh;
+    background-color: #202020;
+    position: relative;
+    display: flex;
+   
+}
+
+.project-details{
+    width: 50%;
+    margin: 50px;
+}
+
+.project-details-text{
+    font-size: 1rem;
+    color: #fff;
+    width: 90%;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.project-details .skill-title{
+    color: #8957FF;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.project-details .skill-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill-container .skill{
+    background-color: #24e33a1f;
+    padding: 5px;
+    border-radius: 10px;
+    letter-spacing: 2.2px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: .75rem;
+    font-weight: 700;
+    color: #24e33a;
+}
+
+.project-links{
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+}
+
+.project-links .link{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 30px;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 700;
+    background-size: 200% 200%;
+    transition: background-position .5s;
+    background-image: linear-gradient(to top, #8957FF 50%, #202020 0);
+    background-position: top;
+    border-bottom: 2px solid #8957FF;
+}
+
+.link:hover{
+    background-position: bottom;
+}
+
+.project-image-slider{
+    min-width: 50%;
+    max-width: 50% ;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8957FF;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*this gives the dimension of slider container*/
+    /*these values will make the container as big as the parent div*/
+    overflow: hidden;
+    /*important parameter to not disrupt the container when slides increases in coverflow and other effect*/
+    }
+    .swiper-slide {
+    width:100%;
+    height:100%;
+    /*this one holds the dimension of each slides and can be changed according to the user wish*/
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+        color: #24e33a !important;
+    }
+
+    .test{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #202020;
+    }
+
+    .test img{
+        width: 80%;
+        height: 50%;
+    }
+
+
+
+@media(max-width: 500px){
+    .project-details-container{
+        margin-top: 60%;
+        width: 95vw;
+        height: 600px;
+        flex-direction: column-reverse;
+    }
+
+    .project-details{
+        width: 100%;
+        height: 500px;
+        margin: 10px;
+        position: relative;
+    }
+    .project-details-text{
+        font-weight: 500;
+    }
+    .project-image-slider{
+        min-height: 50% ;
+        min-width: 100%;
+    }
+
+    .project-links{
+        position: relative;
+        margin-top: 70px;
+        
+        
+    }
+
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .test img{
+        width: 80%;
+        height: 80%;
+    }
+
+    .swiper-button-next::after, .swiper-button-prev::after{
+        font-size: 20px;
+    }
+}
