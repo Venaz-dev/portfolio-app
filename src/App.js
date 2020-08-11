@@ -16,7 +16,7 @@ const routes = [
   { path: "/about", name: "About", Component: About },
   { path: "/projects", name: "Projects", Component: Project },
   { path: "/projects/slider/:id", name: "ImageSlider", Component: ImageSlider },
-  { path: "/404", name: "404", Component: NotFound }
+  { name: "404", Component: NotFound }
 ];
 
 function App() {
@@ -64,8 +64,9 @@ function App() {
             )}
           </Route>
         ))}
-        <Redirect to="/404" />
         </Switch>
+        
+        
       </div>
       <NavBar />
     </>

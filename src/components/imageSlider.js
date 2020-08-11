@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router";
+import { useParams, Redirect, Route } from "react-router";
 import projectInfo from './projectInfo'
 
 import SwiperCore, { Navigation, Pagination, Scrollbar } from "swiper";
@@ -26,15 +26,28 @@ export default function ImageSlider() {
     
   const [info, setInfo] = useState(project)
   
-    console.log('hello', project)
-    console.log('hi', info)
-  
+
+
+useEffect(() => {
+
+  function test(){
+    window.location = "/404";
+  }
+  if (project.length === 0){
+    console.log("hello")
+  test()
+  }
+}, [])
+
+  let skills = null
+  if (info.length > 0){
+    skills = info[0].skills.map( skill => 
+      <p className="skill">{skill}</p>)
+  }
 
   
   
-  const skills = info[0].skills.map( skill => 
-    <p className="skill">{skill}</p>
-  )
+  
 
   return (
     <div>
@@ -43,7 +56,7 @@ export default function ImageSlider() {
           
           <div className="project-details">
             <p className=" project-details-text">
-              {info[0].description}
+              {info.length > 0 ? info[0].description : null}
             </p>
             <div className="project-details-skill">
               <p className="skill-title"> Skills: </p>
@@ -54,10 +67,10 @@ export default function ImageSlider() {
               </div>
             </div>
             <div className="project-links">
-              <a className="link" href={info[0].live_link}>
+              <a className="link" href={info.length > 0 ? info[0].live_link : null}>
                 Go to Site
               </a>
-              <a className="link" href={info[0].github_link}>
+              <a className="link" href={info.length > 0 ? info[0].github_link : null}>
                 Code on Github
               </a>
             </div>
@@ -72,13 +85,13 @@ export default function ImageSlider() {
               onSwiper={(swiper) => console.log(swiper)}
               onSlideChange={() => console.log("slide change")}
             >
-              {info[0].slider.map(slide =>
+              {info.length > 0 ? info[0].slider.map(slide =>
                 <SwiperSlide>
                 <div className="test">
                   <img src={slide} alt="slide"></img>
                 </div>
               </SwiperSlide>
-                )}
+                ) : null}
             </Swiper>
           </div>
         </div>
