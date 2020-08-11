@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import NavBar from "../components/sidebar/navbar";
 import { gsap, Power3 } from "gsap";
-//import Typical from "react-typical";
+import Typical from "react-typical";
 import Profile from "../assets/profile2.png";
 import "./home.css";
 import CSSRulePlugin from "gsap/CSSRulePlugin";
@@ -49,8 +49,8 @@ function Home() {
           </h2>
           <h3 ref={(el) => (statusItem = el)}>
             {" "}
-            I am a{" Front-End Developer "}
-            {/* <Typical
+            I am a{" "}
+            <Typical
               loop={Infinity}
               wrapper="b"
               steps={[
@@ -61,7 +61,7 @@ function Home() {
                 "Tech Enthusiat",
                 3000,
               ]}
-            /> */}
+            />
           </h3>
         </div>
       </header>

@@ -1,49 +1,39 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import { Link } from 'react-router-dom'
 import "./project.style.css";
 import Tilt from "react-tilt";
+import projectInfo from "../../components/projectInfo";
 
 export default function Project() {
   let container = useRef(null);
 
-  let bg = require("../../assets/portfolio.png")
+  const [project, setProject] = useState(projectInfo);
+
+  let bg = require("../../assets/portfolio.png");
 
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <div className="projects-fullwidth">
-        <div className="project-container">
-          <Tilt
-            options={{ max: 25, scale: 1 }}
-            style={{ height: "inherit", width: "inherit" }}
-          >
-            <div
-              ref={(element) => (container = element)}
-              className="project-holder"
-            >
-              <div
-                className="project"
-                style={{
-                  backgroundImage: `linear-gradient(to left bottom, rgba(40, 40, 40, 0.78), rgba(0, 0, 0, 5.93))`,
-                }}
+        {project.map((pro) => (
+          <Link to={`/projects/slider/${pro.title}`}>
+            <div className="project-container">
+              <Tilt
+                options={{ max: 25, scale: 1 }}
+                style={{ height: "inherit", width: "inherit" }}
               >
-                <img src={bg} alt="test"></img>
-              </div>
+                <div
+                  ref={(element) => (container = element)}
+                  className="project-holder"
+                >
+                  <div className="project">
+                    <img src={pro.backgroundImage} alt="test"></img>
+                  </div>
+                  <h1>{`${pro.title}-App`}</h1>
+                </div>
+              </Tilt>
             </div>
-          </Tilt>
-        </div>
-        <div className="project-container">
-          <Tilt
-            className="Tilt"
-            options={{ max: 25, scale: 1 }}
-            style={{ height: "inherit", width: "inherit" }}
-          >
-            <div
-              ref={(element) => (container = element)}
-              className="project-holder"
-            >
-              <div className="project"> </div>
-            </div>
-          </Tilt>
-        </div>
+          </Link>
+        ))}
       </div>
     </div>
   );

@@ -40,7 +40,7 @@
   right: 25px;
   
   margin-left: 50px;
-  background-image: url(../../assets/close.png);
+  background-image: url(../../assets/white_close_icon.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -80,7 +80,7 @@ span#burgerMenu {
   position: absolute;
   top: 20px;
   left: 0;
-  background-image: url(../../assets/open-menu.png);
+  background-image: url(../../assets/white_menu_icon.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

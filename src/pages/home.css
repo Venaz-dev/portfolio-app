@@ -37,10 +37,9 @@
   }
   
   .app-container{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
-  
     width: 500px;
     height: 500px;
     
@@ -90,7 +89,7 @@
       }
 
       .App-header h3{
-          font-size: 24px;
+          font-size: 22px;
           font-weight: 500;
       }
       b{

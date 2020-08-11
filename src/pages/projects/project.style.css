@@ -16,8 +16,8 @@ body{
 }
 
 .project-container{
-    width: 400px;
-    height: 250px;
+    width: 500px;
+    height: 300px;
     margin: 20px;
 }
 
@@ -30,23 +30,31 @@ body{
     position: relative;
     
 }
+.project-holder h1{
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    text-transform: capitalize;
+    color: rgb(170, 165, 165);
+}
 
 .project{
     height: inherit;
     width: inherit;
     z-index: 2;
-    cursor: grab;
+    cursor: pointer;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border: 1px solid #fff; 
+    z-index: 1;
 }
 
 .project::after{
     content: "";
     width: inherit;
     height: inherit;
-    background-image: linear-gradient(to bottom, rgba(31, 30, 30, 0.075), rgba(0, 0, 0, 0.555));
+    background-image: linear-gradient(to bottom, rgba(31, 30, 30, 0.075), rgba(0, 0, 0, 3.555));
 }
 
 .project img{
