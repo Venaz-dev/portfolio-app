@@ -21,7 +21,6 @@ export default function About() {
       <div ref={(el) => (aboutPage = el)} className="about-container">
         <h1 className="base-title">About me</h1>
 
-  
         <div className="code-cv">
           <MarkDown />
         </div>

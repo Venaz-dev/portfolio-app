@@ -85,8 +85,10 @@ span#burgerMenu {
   background-repeat: no-repeat;
   background-size: contain;
   min-width: 60px;
-  min-height: 100px;
+  min-height: 60px;
   visibility: hidden;
+  border-radius: 100%;
+  animation: pulse-animation 2s infinite;
 }
 
 .red {
@@ -189,4 +191,13 @@ span#burgerMenu {
     border-bottom-right-radius: 0%;
   }
 
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px #8957ff6b;
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
 }

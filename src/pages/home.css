@@ -1,6 +1,6 @@
   
   body{
-    background: #fff;
+    overflow-x: hidden;
   }
   
   .home-page{
@@ -80,8 +80,29 @@
     top: 30%;
     left: 10%;
   }
+  .home-links{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .home-links .link{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 30px;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 700;
+    background-size: 200% 200%;
+    transition: background-position .5s;
+    background-image: linear-gradient(to top, #8957FF 50%, #252525 0);
+    background-position: top;
+    border-bottom: 2px solid #8957FF;
+  }
 
   @media (max-width: 500px){
+    .home-links{
+      display: none;
+    }
       .App-header h2{
           font-size: 35px;
           text-align: left;

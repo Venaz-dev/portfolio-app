@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import {Link} from 'react-router-dom';
 import NavBar from "../components/sidebar/navbar";
 import { gsap, Power3 } from "gsap";
 import Typical from "react-typical";
@@ -63,6 +64,20 @@ function Home() {
               ]}
             />
           </h3>
+          <div className="home-links">
+              <Link
+                className="link"
+                to="/about"
+              >
+                More About Me
+              </Link>
+              <Link
+                className="link"
+                to="/about"
+              >
+                My Projects
+              </Link>
+            </div>
         </div>
       </header>
     </div>
