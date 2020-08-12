@@ -84,8 +84,8 @@ span#burgerMenu {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  min-width: 50px;
-  min-height: 50px;
+  min-width: 60px;
+  min-height: 100px;
   visibility: hidden;
 }
 

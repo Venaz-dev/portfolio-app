@@ -1,8 +1,6 @@
-body{
-    
-}
+body {}
 
-.projects-fullwidth{
+.projects-fullwidth {
     padding-top: 10%;
     background-color: #252525;
     min-height: 100%;
@@ -12,25 +10,26 @@ body{
     align-items: center;
     justify-content: center;
     color: white;
-    
+
 }
 
-.project-container{
+.project-container {
     width: 500px;
     height: 300px;
     margin: 20px;
 }
 
-.project-holder{
+.project-holder {
     height: inherit;
     width: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    
+
 }
-.project-holder h1{
+
+.project-holder h1 {
     position: absolute;
     bottom: 0;
     z-index: 2;
@@ -38,7 +37,7 @@ body{
     color: rgb(170, 165, 165);
 }
 
-.project{
+.project {
     height: inherit;
     width: inherit;
     z-index: 2;
@@ -46,40 +45,42 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: 1px solid #fff; 
     z-index: 1;
 }
 
-.project::after{
+.project::after {
     content: "";
     width: inherit;
     height: inherit;
     background-image: linear-gradient(to bottom, rgba(31, 30, 30, 0.075), rgba(0, 0, 0, 3.555));
 }
 
-.project img{
+.project img {
     width: inherit;
     height: inherit;
 }
 
-.project-holder::before{
+.project-holder::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border:2px solid #8957FF;
-    transition: all .5s ;
+    border: 2px solid #8957FF;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    transition: all .5s;
 }
 
-.project-holder:hover::before{
-    top: 10px;
-    left: 10px;
-    
+.project-holder:hover::before {
+    top: 20px;
+    left: 20px;
+
 }
 
-.project::after{
+.project::after {
     content: "";
     position: absolute;
     top: 0;
@@ -88,23 +89,24 @@ body{
     height: 100%;
 }
 
-.project:hover::after{
+.project:hover::after {
     background-color: rgba(57, 57, 170, 0.308);
 }
 
-@media (max-width: 500px){
-    .projects-fullwidth{
+@media (max-width: 500px) {
+    .projects-fullwidth {
+        padding-top: 25%;
         flex-direction: column;
     }
 
-    .project-container{
+    .project-container {
         width: 85vw;
-        height: 30vh;
+        height: 25vh;
         margin: 20px 0;
     }
 
-    .project-holder:hover::before{
+    .project-holder:hover::before {
         top: 10px;
-        left: 0px;   
+        left: 0px;
     }
 }

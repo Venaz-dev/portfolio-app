@@ -10,6 +10,7 @@ export default function NavBar() {
   let sideNav = useRef(null);
   let menuIcon = useRef(null);
   let mainHeader = useRef(null);
+  let logoItem =useRef(null)
   let first = useRef(null);
   let second = useRef(null);
   let third = useRef(null);
@@ -25,7 +26,7 @@ export default function NavBar() {
     if (screenSize <= 500) {
       gsap.to(menuIcon, { rotation: 360, x: 15, duration: 1, delay: 0.5 });
     } else {
-      gsap.to(menuIcon, { rotation: 360, x: 50, duration: 1, delay: 0.5 });
+      gsap.to(menuIcon, { rotation: 180, x: 40, duration: 1, delay: 0.5 });
     }
   }, []);
 
@@ -39,7 +40,7 @@ export default function NavBar() {
   }
 
   function openNav() {
-    TweenMax.to(sideNav, 0.2, {
+    gsap.to(sideNav, 0.2, {
       css: {
         width: "100%",
         borderTopRightRadius: "0%",
@@ -48,8 +49,13 @@ export default function NavBar() {
       delay: 0.2,
     });
 
-    TweenMax.to(menuIcon, 0.2, {
-      rotation: 360,
+    gsap.to(menuIcon, 0.2, {
+      rotation: 30,
+      ease: Power3.easeOut,
+    });
+
+    gsap.to(logoItem, 0.2, {
+      rotation: 30,
       ease: Power3.easeOut,
     });
 
@@ -74,7 +80,12 @@ export default function NavBar() {
       delay: 1,
     });
 
-    gsap.to(menuIcon, 0.2, {
+    gsap.to(menuIcon, 1, {
+      rotation: 0,
+      ease: Power3.easeOut,
+      delay: 0.2,
+    });
+    gsap.to(logoItem, 1, {
       rotation: 0,
       ease: Power3.easeOut,
       delay: 0.2,
@@ -132,14 +143,6 @@ export default function NavBar() {
           >
             Projects
           </NavLink>
-          <NavLink
-            to="/projects/slider/"
-            exact
-            activeStyle={{ fontWeight: "bold", color: "#14121c" }}
-            onClick={closeNav}
-          >
-            slider
-          </NavLink>
         </div>
       </div>
 
@@ -156,7 +159,7 @@ export default function NavBar() {
         activeStyle={{ fontWeight: "bold", color: "#14121c" }}
         onClick={closeNav}
       >
-        <span className="logo"></span>
+        <span ref ={el => logoItem = el}className="logo"></span>
       </NavLink>
     </header>
   );

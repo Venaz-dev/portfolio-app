@@ -18,7 +18,7 @@ export default function Project() {
           <Link to={`/projects/slider/${pro.title}`}>
             <div className="project-container">
               <Tilt
-                options={{ max: 25, scale: 1 }}
+                options={{ max: 100, scale: 1 }}
                 style={{ height: "inherit", width: "inherit" }}
               >
                 <div
@@ -28,7 +28,7 @@ export default function Project() {
                   <div className="project">
                     <img src={pro.backgroundImage} alt="test"></img>
                   </div>
-                  <h1>{`${pro.title}-App`}</h1>
+                  <h1>{`${pro.title}`}</h1>
                 </div>
               </Tilt>
             </div>
