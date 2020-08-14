@@ -21,7 +21,7 @@ export default {
     },
     "pre[class*=\"language-\"]": {
       "color": "24e394",
-      "background": "#14121c",
+      "background": "#000",
       //"textShadow": "0 1px white",
       "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
       "fontSize": "1em",
@@ -44,38 +44,38 @@ export default {
     },
     "pre[class*=\"language-\"]::-moz-selection": {
       "textShadow": "none",
-      "background": "#14121c"
+      "background": "#000"
     },
     "pre[class*=\"language-\"] ::-moz-selection": {
       "textShadow": "none",
-      "background": "#14121c"
+      "background": "#000"
     },
     "code[class*=\"language-\"]::-moz-selection": {
       "textShadow": "none",
-      "background": "#14121c"
+      "background": "#000"
     },
     "code[class*=\"language-\"] ::-moz-selection": {
       "textShadow": "none",
-      "background": "#14121c"
+      "background": "#000"
     },
     "pre[class*=\"language-\"]::selection": {
       "textShadow": "none",
-      "background": "#14121c"
+      "background": "#000"
     },
     "pre[class*=\"language-\"] ::selection": {
       "textShadow": "none",
-      "background": "#14121c"
+      "background": "#000"
     },
     "code[class*=\"language-\"]::selection": {
       "textShadow": "none",
-      "background": "#14121c"
+      "background": "#000"
     },
     "code[class*=\"language-\"] ::selection": {
       "textShadow": "none",
-      "background": "#14121c"
+      "background": "#000"
     },
     ":not(pre) > code[class*=\"language-\"]": {
-      "background": "#14121c",
+      "background": "#000",
       "padding": ".1em",
       "borderRadius": ".3em",
       "whiteSpace": "normal"

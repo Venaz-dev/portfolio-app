@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { TweenMax, Power3, gsap, TimelineLite } from "gsap";
 import { NavLink } from "react-router-dom";
 
-import "./navbar.style.css";
+import "./navbar.style.scss";
 
 export default function NavBar() {
   const tl = new TimelineLite();
@@ -40,6 +40,7 @@ export default function NavBar() {
   }
 
   function openNav() {
+    document.body.style.overflowY ='hidden';
     gsap.to(sideNav, 0.2, {
       css: {
         width: "100%",
@@ -47,16 +48,6 @@ export default function NavBar() {
         borderBottomRightRadius: "0%",
       },
       delay: 0.2,
-    });
-
-    gsap.to(menuIcon, 0.2, {
-      rotation: 30,
-      ease: Power3.easeOut,
-    });
-
-    gsap.to(logoItem, 0.2, {
-      rotation: 30,
-      ease: Power3.easeOut,
     });
 
     tl.to(first, 0.5, { width: "100%", ease: Power3.easeOut, delay: 0.5 })
@@ -69,6 +60,7 @@ export default function NavBar() {
   }
 
   function closeNav() {
+    document.body.style.overflowY ='auto';
     gsap.to(sideNav, 0.2, {
       css: {
         width: 0,
@@ -78,17 +70,6 @@ export default function NavBar() {
 
       ease: Power3.easeOut,
       delay: 1,
-    });
-
-    gsap.to(menuIcon, 1, {
-      rotation: 0,
-      ease: Power3.easeOut,
-      delay: 0.2,
-    });
-    gsap.to(logoItem, 1, {
-      rotation: 0,
-      ease: Power3.easeOut,
-      delay: 0.2,
     });
 
     tl.to(inner, 0.2, { width: "0%" })
@@ -109,10 +90,12 @@ export default function NavBar() {
         id="mySidenav"
         className="sidenav"
       >
+        {/* side nav animation divs */}
         <div ref={(el) => (first = el)} className="red"></div>
         <div ref={(el) => (second = el)} className="blue"></div>
         <div ref={(el) => (third = el)} className="green"></div>
         <div ref={(el) => (forth = el)} className="yellow"></div>
+
         <div
           id="sidenavInner"
           className="sidenavinner"
@@ -125,24 +108,11 @@ export default function NavBar() {
             activeStyle={{ fontWeight: "bold", color: "#14121c" }}
             onClick={closeNav}
           >
-            Home
+            <h3>Home</h3>
           </NavLink>
-          <NavLink
-            to="/about"
-            exact
-            activeStyle={{ fontWeight: "bold", color: "#14121c" }}
-            onClick={closeNav}
-          >
-            About
-          </NavLink>
-          <NavLink
-            to="/projects"
-            exact
-            activeStyle={{ fontWeight: "bold", color: "#14121c" }}
-            onClick={closeNav}
-          >
-            Projects
-          </NavLink>
+          <a href="#about-me" onClick={closeNav}><h3>About Me</h3></a>
+          <a href="#projects" onClick={closeNav}><h3>My Projects</h3></a>
+          
         </div>
       </div>
 
@@ -161,6 +131,8 @@ export default function NavBar() {
       >
         <span ref ={el => logoItem = el}className="logo"></span>
       </NavLink>
+
+      
     </header>
   );
 }

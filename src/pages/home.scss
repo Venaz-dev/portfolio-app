@@ -1,0 +1,212 @@
+  body {
+    overflow-x: hidden;
+    background-color: #000;
+  }
+
+  div.skew {
+    transition: transform .25s;
+    will-change: transform;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+    z-index: 3;
+
+
+    a {
+      height: 50px;
+      width: 50px;
+      margin: 30px;
+      border-radius: 50%;
+      background-color: #8957ff94;
+      animation: bounce 2s infinite alternate;
+      transition: 1s;
+
+      &:hover {
+        width: fit-content;
+        height: fit-content;
+      }
+
+      img {
+        transition: linear 1s;
+      }
+
+      img:hover {
+        transform: scale(1.5);
+      }
+    }
+
+
+
+  }
+
+  .home-page {
+    width: 100vw;
+    min-height: 100vh;
+  }
+
+  .App-header {
+
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+
+  }
+
+  .App-header h2 {
+    font-size: 60px;
+    color: #8957FF;
+    opacity: 0;
+    letter-spacing: 5px;
+  }
+
+  .App-header h3 {
+    font-size: 30px;
+    color: #fff;
+    opacity: 0;
+    text-align: left;
+
+  }
+
+  .app-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+
+  }
+
+  .container {
+    visibility: visible;
+    width: inherit;
+    height: inherit;
+
+  }
+
+  .img-container {
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    overflow: hidden;
+  }
+
+  .img-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #000;
+
+
+  }
+
+  .img-container img {
+    width: inherit;
+    height: inherit;
+    position: relative;
+  }
+
+  .text-container {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+  }
+
+  .home-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 30px;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 700;
+    background-size: 200% 200%;
+    transition: background-position .5s;
+    background-image: linear-gradient(to top, #8957FF 50%, #000000 0);
+    background-position: top;
+    border-bottom: 2px solid #8957FF;
+  }
+
+  @media (max-width: 500px) {
+    .home-links {
+      display: none;
+    }
+
+    .App-header h2 {
+      font-size: 35px;
+      text-align: left;
+      letter-spacing: 2px;
+    }
+
+    .App-header h3 {
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    b {
+      font-weight: 500;
+    }
+
+    .text-container {
+      top: 20%;
+    }
+
+    .app-container {
+      height: 300px;
+      width: 300px;
+    }
+
+    .social-links {
+      flex-direction: row;
+      justify-content: center;
+      background-color: #000000;
+      height: fit-content;
+      padding-bottom: 5px;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+
+      a {
+        height: 40px;
+        width: 40px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        animation: none;
+
+        img {
+          height: 40px;
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  @keyframes bounce {
+    from {
+      transform: translateY(0)
+    }
+
+    to {
+      transform: translateY(-10px);
+    }
+  }

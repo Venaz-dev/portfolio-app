@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500');
  
 body{
   font-family: 'poppins';
@@ -38,5 +38,5 @@ body{
     border-radius: 10px;
   }
   ::-webkit-scrollbar-track{
-    background: #252525;
+    background: #000;
   }

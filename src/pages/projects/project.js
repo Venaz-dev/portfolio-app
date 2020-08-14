@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import "./project.style.css";
 import Tilt from "react-tilt";
 import projectInfo from "../../components/projectInfo";
@@ -12,13 +12,15 @@ export default function Project() {
   let bg = require("../../assets/portfolio.png");
 
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div style={{ width: "100vw", height: "100vh", }}>
+      <h1 style={{paddingLeft:'10%'}} className="base-title">My Projects</h1>
       <div className="projects-fullwidth">
+      
         {project.map((pro) => (
           <Link to={`/projects/slider/${pro.title}`}>
             <div className="project-container">
               <Tilt
-                options={{ max: 100, scale: 1 }}
+                options={{ max: 25, scale: 1 }}
                 style={{ height: "inherit", width: "inherit" }}
               >
                 <div

@@ -1,8 +1,11 @@
 body {}
 
 .projects-fullwidth {
-    padding-top: 10%;
-    background-color: #252525;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 10%;
+    background-color: #000;
     min-height: 100%;
     min-width: 100%;
     display: flex;
@@ -16,7 +19,7 @@ body {}
 .project-container {
     width: 500px;
     height: 300px;
-    margin: 20px;
+    margin: 40px 30px;
 }
 
 .project-holder {
@@ -34,7 +37,9 @@ body {}
     bottom: 0;
     z-index: 2;
     text-transform: capitalize;
-    color: rgb(170, 165, 165);
+    color: #fff;
+    letter-spacing: 3px;
+    font-weight: 400;
 }
 
 .project {

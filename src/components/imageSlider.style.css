@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #252525;
+    background-color: #000;
 }
 
 .slider-container h1{
@@ -18,7 +18,9 @@
 .project-details-container{
     width: 85vw;
     height: 70vh;
-    background-color: #202020;
+    background-image: linear-gradient(-180deg,#1a1527,#0e0c16 88%,#0e0c16 99%);
+    background-color: #0f0d15;
+    background-repeat: repeat-x;
     position: relative;
     display: flex;
    
@@ -75,9 +77,10 @@
     font-weight: 700;
     background-size: 200% 200%;
     transition: background-position .5s;
-    background-image: linear-gradient(to top, #8957FF 50%, #202020 0);
+    background-image: linear-gradient(to top, #8957FF 50%, #20202000 0);
     background-position: top;
-    border-bottom: 2px solid #8957FF;
+    border-bottom: 2px solid #8957FF; 
+    /* b89bfd */
 }
 
 .link:hover{
@@ -91,7 +94,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #8957FF;
 }
 
 .swiper-container {
@@ -121,7 +123,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #202020;
+        background-color: none;
     }
 
     .test img{

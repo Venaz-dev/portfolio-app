@@ -10,6 +10,7 @@ import Project from "./pages/projects/project"
 import NavBar from "./components/sidebar/navbar";
 import ImageSlider from "./components/imageSlider"
 import NotFound from "./pages/notFound"
+import NewProject from "./pages/projects/newProjects"
 
 const routes = [
   { path: "/", name: "Home", Component: Home },
